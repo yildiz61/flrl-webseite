@@ -490,15 +490,13 @@ a { color: inherit; }
 .legal code { font-size: .9em; }
 
 /* Kopfzeile der Rechtsseiten: immer mit Hintergrund (dort läuft kein Skript) */
-.legal-page .site-header {
-  background: color-mix(in srgb, var(--paper) 88%, transparent);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  box-shadow: 0 1px 0 var(--line);
-}
+.legal-page .site-header { background: var(--paper); box-shadow: 0 1px 0 var(--line); }
 
 /* Platz für das Kaffeeglas, damit es die Fußzeilen-Links nicht verdeckt */
-body:has(.glass) .site-footer__inner { padding-right: 80px; }
+body:has(.glass) .site-footer__links, body:has(.glass) .site-footer__draft { padding-right: 80px; }
+@media (min-width: 1380px) {
+  body:has(.glass) .site-footer__links, body:has(.glass) .site-footer__draft { padding-right: 0; }
+}
 
 /* ---------- Scroll-Begleiter: Kaffeeglas ---------- */
 .glass {
@@ -579,8 +577,13 @@ body:has(.glass) .site-footer__inner { padding-right: 80px; }
   .tag { margin: 8px 8px 0 14px; align-self: start; }
   .facts li { padding: 0 14px; font-size: 1.1rem; }
   .glass { width: 40px; }
-  body:has(.glass) .site-footer__inner { padding-right: 56px; }
+  body:has(.glass) .site-footer__links { padding-right: 0; }
+  body:has(.glass) .site-footer__draft { padding-right: 56px; }
   .draft-bar span { font-size: .72rem; }
+}
+
+@media (max-width: 400px) {
+  .legal-page .nav a[href="index.html"] { display: none; }
 }
 
 @media (prefers-reduced-motion: reduce) {
