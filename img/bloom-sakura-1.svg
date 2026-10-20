@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-125 -125 250 250">
+<defs>
+<filter id="wc" x="-20%" y="-20%" width="140%" height="140%" color-interpolation-filters="sRGB">
+<feTurbulence type="fractalNoise" baseFrequency="0.022" numOctaves="3" seed="15" result="warp"/>
+<feDisplacementMap in="SourceGraphic" in2="warp" scale="14" xChannelSelector="R" yChannelSelector="G" result="shape"/>
+<feGaussianBlur in="shape" stdDeviation="1.1" result="soft"/>
+<feMorphology in="soft" operator="erode" radius="2.5" result="inner"/>
+<feGaussianBlur in="inner" stdDeviation="5" result="innerSoft"/>
+<feComposite in="soft" in2="innerSoft" operator="arithmetic" k2="1" k3="-0.45" result="pool"/>
+<feTurbulence type="fractalNoise" baseFrequency="0.75" numOctaves="2" seed="19" result="grain"/>
+<feColorMatrix in="grain" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  -0.9 0 0 0 1.28" result="grainA"/>
+<feComposite in="pool" in2="grainA" operator="in"/>
+</filter>
+<filter id="bleed" x="-35%" y="-35%" width="170%" height="170%" color-interpolation-filters="sRGB">
+<feTurbulence type="fractalNoise" baseFrequency="0.012" numOctaves="4" seed="16" result="warp"/>
+<feDisplacementMap in="SourceGraphic" in2="warp" scale="46" xChannelSelector="R" yChannelSelector="G" result="shape"/>
+<feGaussianBlur in="shape" stdDeviation="7" result="soft"/>
+<feTurbulence type="fractalNoise" baseFrequency="0.6" numOctaves="2" seed="17" result="grain"/>
+<feColorMatrix in="grain" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  -1.2 0 0 0 1.4" result="grainA"/>
+<feComposite in="soft" in2="grainA" operator="in"/>
+</filter>
+<filter id="ink" x="-10%" y="-10%" width="120%" height="120%" color-interpolation-filters="sRGB">
+<feTurbulence type="fractalNoise" baseFrequency="0.06" numOctaves="2" seed="18" result="warp"/>
+<feDisplacementMap in="SourceGraphic" in2="warp" scale="4" xChannelSelector="R" yChannelSelector="G" result="shape"/>
+<feGaussianBlur in="shape" stdDeviation="0.45"/>
+</filter></defs>
+<g style="mix-blend-mode:multiply"><path d="M0 0C63.1 -27.5 68.2 -71.4 22.7 -91.6L0 -78.8L-22.7 -91.6C-68.2 -71.4 -63.1 -27.5 0 0Z" transform="translate(0 0) rotate(6.7)" fill="#f4c9d1" fill-opacity="0.578" filter="url(#wc)" style="mix-blend-mode:multiply"/><path d="M0 0C72 -30.8 77.8 -80.1 25.9 -102.7L0 -88.3L-25.9 -102.7C-77.8 -80.1 -72 -30.8 0 0Z" transform="translate(0 0) rotate(68.4)" fill="#ecb2c0" fill-opacity="0.653" filter="url(#wc)" style="mix-blend-mode:multiply"/><path d="M0 0C67.6 -27.4 73 -71.3 24.3 -91.4L0 -78.6L-24.3 -91.4C-73 -71.3 -67.6 -27.4 0 0Z" transform="translate(0 0) rotate(144.5)" fill="#f7d8dc" fill-opacity="0.603" filter="url(#wc)" style="mix-blend-mode:multiply"/><path d="M0 0C61.2 -30.9 66 -80.4 22 -103L0 -88.6L-22 -103C-66 -80.4 -61.2 -30.9 0 0Z" transform="translate(0 0) rotate(212.7)" fill="#ecb2c0" fill-opacity="0.5820000000000001" filter="url(#wc)" style="mix-blend-mode:multiply"/><path d="M0 0C65.6 -28 70.8 -72.9 23.6 -93.4L0 -80.4L-23.6 -93.4C-70.8 -72.9 -65.6 -28 0 0Z" transform="translate(0 0) rotate(284.9)" fill="#ecb2c0" fill-opacity="0.585" filter="url(#wc)" style="mix-blend-mode:multiply"/></g>
+</svg>

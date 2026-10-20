@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-125 -125 250 250">
+<defs>
+<filter id="wc" x="-20%" y="-20%" width="140%" height="140%" color-interpolation-filters="sRGB">
+<feTurbulence type="fractalNoise" baseFrequency="0.022" numOctaves="3" seed="21" result="warp"/>
+<feDisplacementMap in="SourceGraphic" in2="warp" scale="14" xChannelSelector="R" yChannelSelector="G" result="shape"/>
+<feGaussianBlur in="shape" stdDeviation="1.1" result="soft"/>
+<feMorphology in="soft" operator="erode" radius="2.5" result="inner"/>
+<feGaussianBlur in="inner" stdDeviation="5" result="innerSoft"/>
+<feComposite in="soft" in2="innerSoft" operator="arithmetic" k2="1" k3="-0.45" result="pool"/>
+<feTurbulence type="fractalNoise" baseFrequency="0.75" numOctaves="2" seed="25" result="grain"/>
+<feColorMatrix in="grain" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  -0.9 0 0 0 1.28" result="grainA"/>
+<feComposite in="pool" in2="grainA" operator="in"/>
+</filter>
+<filter id="bleed" x="-35%" y="-35%" width="170%" height="170%" color-interpolation-filters="sRGB">
+<feTurbulence type="fractalNoise" baseFrequency="0.012" numOctaves="4" seed="22" result="warp"/>
+<feDisplacementMap in="SourceGraphic" in2="warp" scale="46" xChannelSelector="R" yChannelSelector="G" result="shape"/>
+<feGaussianBlur in="shape" stdDeviation="7" result="soft"/>
+<feTurbulence type="fractalNoise" baseFrequency="0.6" numOctaves="2" seed="23" result="grain"/>
+<feColorMatrix in="grain" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  -1.2 0 0 0 1.4" result="grainA"/>
+<feComposite in="soft" in2="grainA" operator="in"/>
+</filter>
+<filter id="ink" x="-10%" y="-10%" width="120%" height="120%" color-interpolation-filters="sRGB">
+<feTurbulence type="fractalNoise" baseFrequency="0.06" numOctaves="2" seed="24" result="warp"/>
+<feDisplacementMap in="SourceGraphic" in2="warp" scale="4" xChannelSelector="R" yChannelSelector="G" result="shape"/>
+<feGaussianBlur in="shape" stdDeviation="0.45"/>
+</filter></defs>
+<g style="mix-blend-mode:multiply"><path d="M0 0C41.5 -26.9 33.2 -67.3 0 -89.7C-33.2 -67.3 -41.5 -26.9 0 0Z" transform="translate(0 0) rotate(-2)" fill="#f5c9ad" fill-opacity="0.469" filter="url(#wc)" style="mix-blend-mode:multiply"/><path d="M0 0C37.1 -26.9 29.7 -67.4 0 -89.8C-29.7 -67.4 -37.1 -26.9 0 0Z" transform="translate(0 0) rotate(29.9)" fill="#f0b597" fill-opacity="0.45" filter="url(#wc)" style="mix-blend-mode:multiply"/><path d="M0 0C36.9 -30 29.5 -75.1 0 -100.1C-29.5 -75.1 -36.9 -30 0 0Z" transform="translate(0 0) rotate(63.6)" fill="#f0b597" fill-opacity="0.498" filter="url(#wc)" style="mix-blend-mode:multiply"/><path d="M0 0C41.5 -26.5 33.2 -66.2 0 -88.2C-33.2 -66.2 -41.5 -26.5 0 0Z" transform="translate(0 0) rotate(99.3)" fill="#e89d7f" fill-opacity="0.431" filter="url(#wc)" style="mix-blend-mode:multiply"/><path d="M0 0C37.4 -28.6 29.9 -71.4 0 -95.2C-29.9 -71.4 -37.4 -28.6 0 0Z" transform="translate(0 0) rotate(127)" fill="#e89d7f" fill-opacity="0.457" filter="url(#wc)" style="mix-blend-mode:multiply"/><path d="M0 0C43 -27.8 34.4 -69.6 0 -92.7C-34.4 -69.6 -43 -27.8 0 0Z" transform="translate(0 0) rotate(164.2)" fill="#e89d7f" fill-opacity="0.556" filter="url(#wc)" style="mix-blend-mode:multiply"/><path d="M0 0C41.2 -32 32.9 -80 0 -106.7C-32.9 -80 -41.2 -32 0 0Z" transform="translate(0 0) rotate(194.7)" fill="#e89d7f" fill-opacity="0.561" filter="url(#wc)" style="mix-blend-mode:multiply"/><path d="M0 0C39 -27.9 31.2 -69.8 0 -93C-31.2 -69.8 -39 -27.9 0 0Z" transform="translate(0 0) rotate(223.1)" fill="#f5c9ad" fill-opacity="0.5539999999999999" filter="url(#wc)" style="mix-blend-mode:multiply"/><path d="M0 0C41.8 -29.6 33.4 -74 0 -98.6C-33.4 -74 -41.8 -29.6 0 0Z" transform="translate(0 0) rotate(268.6)" fill="#f0b597" fill-opacity="0.5589999999999999" filter="url(#wc)" style="mix-blend-mode:multiply"/><path d="M0 0C37.2 -26.5 29.8 -66.3 0 -88.4C-29.8 -66.3 -37.2 -26.5 0 0Z" transform="translate(0 0) rotate(295.5)" fill="#e89d7f" fill-opacity="0.597" filter="url(#wc)" style="mix-blend-mode:multiply"/><path d="M0 0C38.1 -31.3 30.5 -78.3 0 -104.4C-30.5 -78.3 -38.1 -31.3 0 0Z" transform="translate(0 0) rotate(331.8)" fill="#f5c9ad" fill-opacity="0.406" filter="url(#wc)" style="mix-blend-mode:multiply"/></g>
+</svg>
