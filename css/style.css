@@ -485,6 +485,20 @@ a { color: inherit; }
 .legal__stand { margin-top: 2rem !important; font-size: .9rem; font-style: italic; }
 .legal__back { margin-top: 2rem !important; }
 .site-footer__links a[aria-current="page"] { color: var(--ink); text-decoration-color: var(--rose); }
+.legal h3 { margin: 1.4rem 0 .4rem; font-size: .78rem; font-weight: 500; letter-spacing: .2em; text-transform: uppercase; }
+.legal__highlight { padding: 14px 18px; border-left: 3px solid var(--rose); background: var(--blush); }
+.legal code { font-size: .9em; }
+
+/* Kopfzeile der Rechtsseiten: immer mit Hintergrund (dort läuft kein Skript) */
+.legal-page .site-header {
+  background: color-mix(in srgb, var(--paper) 88%, transparent);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 1px 0 var(--line);
+}
+
+/* Platz für das Kaffeeglas, damit es die Fußzeilen-Links nicht verdeckt */
+body:has(.glass) .site-footer__inner { padding-right: 80px; }
 
 /* ---------- Scroll-Begleiter: Kaffeeglas ---------- */
 .glass {
@@ -543,6 +557,7 @@ a { color: inherit; }
 
 @media (max-width: 860px) {
   .nav a:not(.btn) { display: none; }
+  .legal-page .nav a:not(.btn) { display: inline; font-size: .9rem; }
   .hero { grid-template-columns: 1fr; min-height: 0; text-align: left; }
   .hero__art { max-width: 460px; justify-self: center; order: -1; margin-bottom: -10px; }
   .cake, .about, .visit { grid-template-columns: 1fr; }
@@ -564,6 +579,7 @@ a { color: inherit; }
   .tag { margin: 8px 8px 0 14px; align-self: start; }
   .facts li { padding: 0 14px; font-size: 1.1rem; }
   .glass { width: 40px; }
+  body:has(.glass) .site-footer__inner { padding-right: 56px; }
   .draft-bar span { font-size: .72rem; }
 }
 
