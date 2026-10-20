@@ -1,7 +1,7 @@
 # Floral Café – Webseiten-Entwurf
 
-Unverbindlicher Webseiten-Vorschlag für das Floral Café in Frankfurt-Niederrad (Triftstraße 18).
-Die Seite ist bewusst auf `noindex` gestellt, solange das Café nicht zugestimmt hat.
+Unverbindlicher Gestaltungsentwurf von Yildiz Kasimay für das Floral Café in Frankfurt-Niederrad.
+Dies ist nicht die offizielle Webseite des Cafés. Die Seiten sind auf `noindex` gestellt.
 
 ## Ansehen
 
@@ -13,18 +13,17 @@ python3 -m http.server 8000
 
 Dann http://localhost:8000 öffnen.
 
+## Veröffentlichen mit GitHub Pages
+
+Settings → Pages → Build and deployment → Source „Deploy from a branch“ → diesen Branch und „/ (root)“ wählen → Save.
+Die leere Datei `.nojekyll` sorgt dafür, dass GitHub die Dateien unverändert ausliefert.
+
 ## Aufbau
 
 - `index.html` – Seite (Hero, Angebot als Torte, Kleine Karte, Über uns, Besuch)
+- `impressum.html`, `datenschutz.html` – Anbieterkennzeichnung und Datenschutzerklärung
 - `css/style.css` – Gestaltung, Animationen, responsive Regeln
 - `js/main.js` – aufblühende Hintergrundblüten, Torte, Kaffeeglas als Scroll-Begleiter
 - `img/` – Aquarell-Illustrationen (SVG, erzeugt)
 - `scripts/aquarell.mjs` – erzeugt `img/*.svg` und die Torte in `index.html`: `node scripts/aquarell.mjs`
-- `fonts/` – Fraunces & Jost (SIL Open Font License), lokal eingebunden
-- `wissen/floral-cafe.md` – recherchierte Fakten zum Café mit Quellen
-
-## Vor einer Veröffentlichung offen
-
-- Zustimmung der Inhaberin, echte Fotos, Speisekarte mit Preisen
-- Impressum und Datenschutzerklärung (Links im Fuß sind Platzhalter)
-- `noindex` entfernen und Entwurfsleiste ausbauen
+- `fonts/` – Fraunces & Jost (SIL Open Font License 1.1), lokal eingebunden
